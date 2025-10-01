@@ -10,7 +10,7 @@
     .muted{color:#6b7280}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
     .card{border:1px solid #e5e7eb;border-radius:12px;padding:16px}
-    .btn{display:inline-block;padding:10px 12px;border-radius:10px;border:1px solid #d1d5db;text-decoration:none;text-align:center}
+    .btn{display:inline-block;padding:10px 12px;border-radius:10px;border:1px solid #d1d5db;text-decoration:none;text-align:center;cursor:pointer}
     .btn:hover{background:#f8fafc}
     code{background:#f6f8fa;padding:2px 6px;border-radius:4px}
     .warn{color:#b45309}
@@ -28,9 +28,9 @@
       to the LanguageLine service infrastructure at the selected location. Results help LLS IT confirm whether performance
       issues originate on the client network path or beyond.
     </p>
-    <p class="warn"><strong>One-time setup required:</strong> Click <em>Register LLS Diag</em> below to enable the
+    <p class="warn"><strong>One-time enablement:</strong> Click <em>Enable One‑Click</em> to register the
       <code>llsdiag://</code> protocol on this PC. After that, starting a test is a single click.</p>
-    <p><a class="btn" href="Register-LLSDiag.ps1" download>Register LLS Diag</a> <span class="muted">— download, right-click → Run with PowerShell (Admin)</span></p>
+    <p><a class="btn" href="Enable-LLSDiag.reg" download>Enable One‑Click</a> <span class="muted">— download, then double‑click the file and accept the prompt</span></p>
   </div>
 
   <div class="card">
@@ -61,8 +61,8 @@
     <h3>What happens on click</h3>
     <ol>
       <li>Your browser calls <code>llsdiag://run?ip=&lt;IP&gt;&amp;dur=900</code>.</li>
-      <li>Windows launches PowerShell with a secure, predefined command that fetches and runs <code>Runner.ps1</code> from this site.</li>
-      <li>The script pings the selected IP ~1/second for 15 minutes, saves raw logs, summary, and a ZIP in <code>%TEMP%</code>, and opens the folder at the end.</li>
+      <li>Windows launches PowerShell with a predefined command that fetches and runs <code>Runner.ps1</code> from this site.</li>
+      <li>The script pings the selected IP ~1/second for 15 minutes, saves raw logs, a summary, and a ZIP in <code>%TEMP%</code>, and opens the folder at the end.</li>
     </ol>
     <p class="ok"><strong>Privacy:</strong> All packets originate from the interpreter’s PC (their network). No credentials are used.</p>
   </div>
